@@ -66,6 +66,9 @@
                "Play Gunspy (no stabbing)",
                "Telefrag another player",
                "Kill and die to another player at the same time",
+               "Stop an enemy from a winning cap",
+               "Dodge a Sniper by staning still",
+               "Jude joins VC"
                ]
     NTRYseed = tk.StringVar(root)
     SCLstep = tk.DoubleVar()
