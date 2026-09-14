@@ -1,3 +1,18 @@
+
+    Not where the code suppose to be be mr joe goren left
+    it here
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     #import
     import tkinter as tk
     import random
