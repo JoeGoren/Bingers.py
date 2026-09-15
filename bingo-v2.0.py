@@ -2,7 +2,6 @@
 import tkinter as tk
 import tkinter.font as tkFont
 import random
-from stringprep import b1_set
 
 #innitialise
 root = tk.Tk()
@@ -72,7 +71,7 @@ bingers = ["Be an MVP at the end of a round",
            "Dodge a Sniper by standing still",
            "Someone else joins VC"
            ]
-font  = tk.font.Font(family="small fonts", size=8, weight="bold")
+font  = tkFont.Font(family="small fonts", size=8, weight="bold")
 rerollflag = False
 pickfrom = 27
 rerolls = 1
@@ -85,6 +84,8 @@ def gen_seed():
     global bingers, rerollflag, rerolls
     rerollflag = False
     rerolls = 1
+    rerollBTN['text'] = f"Rerolls: {rerolls}"
+    rerollBTN['state'] = "normal"
     bingers = sorted(bingers, key=sort)
     for i in range(1,26):
         globals()["buttons"+str(i)].BTN["text"] = bingers[i-1]
