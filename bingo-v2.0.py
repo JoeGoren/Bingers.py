@@ -13,8 +13,7 @@ id=1
 root.attributes("-topmost", True)
 root.overrideredirect(True)
 #var
-bingers = [""
-           "Get a random crit kill",
+bingers = ["Get a random crit kill",
            "Be an MVP at the end of a round",
            "Get revenge on a player",
            "Die to a random crit",
