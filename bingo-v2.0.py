@@ -67,7 +67,7 @@ bingers = [""
            "Get 5 kills as shotgun Heavy (no minigun)",
            "Recreate Meet the Medic (get ubered as Heavy)",
            "Place a lvl 3 sentry outside the opposition's spawn doors",
-           "Get 5 kills on one sentry", 
+           "Get 5 kills on one sentry",
            "Kill a Spy with a wrench",
            "Kill a sentry with a sentry",
            "Uber a Sniper",
@@ -113,13 +113,14 @@ def gen_seed():
 
 def minmax():
     global rootsize
-    if rootsize != "90x85":
-        rootsize = "90x85"
+    if rootsize != "45x43":
+        rootsize = "45x43"
         root.geometry(rootsize)
         root.wm_attributes("-alpha", 0.4)
         minmaxBTN["bg"] = "black"
         minmaxBTN["fg"] = "white"
-        minmaxBTN["text"] = "Open board"
+        minmaxBTN["text"] = "Open Board"
+        minmaxBTN["height"], minmaxBTN["width"] = 3, 5
 
     else:
         rootsize = "456x525"
@@ -128,7 +129,7 @@ def minmax():
         minmaxBTN["bg"] = "lightgrey"
         minmaxBTN["text"] = "Minimise"
         minmaxBTN["fg"] = "black"
-
+        minmaxBTN["height"], minmaxBTN["width"] = 6, 10
 def close_window():
     root.destroy()
 
@@ -154,7 +155,7 @@ def reroll():
 genseedBTN = tk.Button(root, text="Generate Seed", command=gen_seed, font=font, bg="lightgray", height=6, width=22)
 genseedBTN.grid(row=0, column=1, columnspan=2, sticky=tk.W)
 minmaxBTN = tk.Button(root, text="Minimise", command=minmax, font=font, bg="lightgrey", height=6, width=10, wraplength=60)
-minmaxBTN.grid(row=0, column=0, columnspan=1, sticky=tk.W)
+minmaxBTN.grid(row=0, column=0, columnspan=1, sticky=tk.NW)
 closeBTN = tk.Button(root, text="Close Tab", command=close_window, font=font, bg="lightgray", height=6, width=10)
 closeBTN.grid(row=0, column=4, columnspan=1, sticky=tk.W)
 rerollBTN = tk.Button(root, text=f"Reroll: {rerolls}", command=reroll, font=font, bg="lightgray", height=6, width=10)
